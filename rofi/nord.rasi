@@ -1,0 +1,89 @@
+configuration{
+    font: "JetBrainsMono Nerd Font 11";
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    display-drun: "drun";
+    display-run: "run";
+    display-window: "window";
+    display-emoeji: "emoji";
+    location: 0;
+    disable-history: true;
+}
+
+@theme "/dev/null"
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+* {
+    bg-col:  #2e3440;
+    border-col: #434c5e;
+    selected-col: #434c5e;
+    blue: #434c5e;
+    fg-col: #d8dee9;
+    fg-col2: #2e3440;
+    width: 600;
+}
+
+window {
+    padding: 20px;
+    height: 360px;
+    border: 3px;
+    border-color: @border-col;
+    background-color: @bg-col;
+}
+
+mainbox {
+    padding: 5px;
+    border-radius: 13px;
+    background-color: @bg-col;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+prompt {
+    background-color: @blue;
+    padding: 5px 5px 0px;
+    text-color: @bg-col;
+    border-radius: 3px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 6px;
+    text-color: @fg-col;
+    background-color: @bg-col;
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    columns: 2;
+    background-color: @bg-col;
+}
+
+element {
+    padding: 5px;
+    background-color: @bg-col;
+    text-color: @fg-col  ;
+}
+
+element-icon {
+    size: 25px;
+}
+
+element selected {
+    background-color:  @selected-col ;
+    text-color: @fg-col2  ;
+}
