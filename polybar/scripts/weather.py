@@ -4,7 +4,7 @@
 import requests
 
 CITY = "787657"
-API_KEY = "c96c759c587a2be4ac68f6116f4b5381"
+API_KEY = "yourapikey(can be registered on openweathermap.org)"
 UNITS = "Metric"
 LANG = "en"
 
