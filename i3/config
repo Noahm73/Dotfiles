@@ -74,20 +74,20 @@ default_border pixel 2
 
 gaps inner 12
 
-bar {
-        status_command /usr/bin/bumblebee-status \
-	        -m disk weather  memory cpu sensors uptime kernel datetime caffeine pasink \
-		-p sensors.show_freq=false weather.showcity=false datetime.format="%d/%a %H:%M" pasink.percent_change=5% pasink.limit=100% \
-		-t onedark-powerline
-	position top
- colors {
-        background #2e3440
-        focused_workspace  #434c5e #434c5e #d8dee9
-        active_workspace   #2e3440 #2e3440 #d8dee9
-        inactive_workspace #2e3440 #2e3440 #d8dee9
-        urgent_workspace   #434c5e #434c5e #d8dee9
- }	
-}
+#bar {
+#        status_command /usr/bin/bumblebee-status \
+#	        -m disk weather  memory cpu sensors uptime kernel datetime caffeine pasink \
+#		-p sensors.show_freq=false weather.showcity=false datetime.format="%d/%a %H:%M" pasink.percent_change=5% pasink.limit=100% \
+#		-t onedark-powerline
+#	position top
+# colors {
+#        background #2e3440
+#        focused_workspace  #434c5e #434c5e #d8dee9
+#        active_workspace   #2e3440 #2e3440 #d8dee9
+#        inactive_workspace #2e3440 #2e3440 #d8dee9
+#        urgent_workspace   #434c5e #434c5e #d8dee9
+# }	
+#}
 
 bindsym $mod+b exec --no-startup-id firefox
 bindsym $mod+n exec --no-startup-id pcmanfm
@@ -101,3 +101,4 @@ bindsym Print exec --no-startup-id gnome-screenshot -i
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id picom --experimental-backends
 exec_always --no-startup-id lxsession &
+exec_always --no-startup-id ~/.config/polybar/launch.sh
